@@ -8,7 +8,7 @@ using System.Text;
 namespace Library.Models
 {
     [Table("fines")]
-    public class Fine
+    public class Fine       //долги
     {
         [Key][Column("id")] public int Id { get; set; }
         [ForeignKey("Reader")][Column("reader_id")] public int ReaderId { get; set; }   //связь кому выписан штраф
