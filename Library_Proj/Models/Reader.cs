@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
-namespace Library.Models
+namespace Library_Proj.Models
 {
     [Table("readers")]
     public class Reader

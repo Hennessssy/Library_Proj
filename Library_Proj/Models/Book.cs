@@ -4,7 +4,7 @@ using System.Text;
 using System.ComponentModel.DataAnnotations;        //для валидации данных типа key required
 using System.ComponentModel.DataAnnotations.Schema; //для изменения названия в самой бд типа Table books
 
-namespace Library.Models
+namespace Library_Proj.Models
 {
 
     [Table("books")] //в самой бд будет называться books а тут класс будет Book
