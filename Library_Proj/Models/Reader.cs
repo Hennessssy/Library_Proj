@@ -11,7 +11,7 @@ namespace Library.Models
     {
         [Key][Column("id")] public int Id { get; set; }
         [Required][StringLength(100)][Column("full_name")] public string FullName { get; set; } = string.Empty; //фио полностью
-        [Required][StringLength(25)][Column("tilet_number")] public string TicketNumber { get; set; } = string.Empty;
+        [Required][StringLength(25)][Column("tiket_number")] public string TicketNumber { get; set; } = string.Empty;
         [StringLength(200)][Column("contact_info")] public string? ContactInfo { get; set; }
         [Column("has_debt")] public bool HasDebt { get; set; } = false; //есть ли долги
 

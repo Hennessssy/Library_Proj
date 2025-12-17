@@ -17,7 +17,7 @@ namespace Library.Models
         [StringLength(15)][Column("isbn")] public string? ISBN { get; set; }
         [Column("year")] public int Year { get; set; }
         [Required][Column("total_count")] public int TotalCount { get; set; } = 0;
-        [Required][Column("avalible_count")] public int AvalibleCount { get; set; } = 0;
+        [Required][Column("available_count")] public int AvailableCount { get; set; } = 0;
         [Required][StringLength(30)][Column("status")] public string Status { get; set; } = "Доступна"; //по умолчанию доступна
 
     }
