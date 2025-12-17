@@ -11,14 +11,14 @@ namespace Library_Proj.Models
     {
         [Key][Column("id")] public int Id { get; set; }
 
-        [Column("book_id")] public int BookId { get; set; }
+        [Column("book_id")] public int BookId { get; set; }     //какую книгу бронирует
         [ForeignKey("BookId")] public Book Book { get; set; }
 
-        [Column("reader_id")] public int ReaderId { get; set; }
+        [Column("reader_id")] public int ReaderId { get; set; }     //кто бронирует 
         [ForeignKey("ReaderId")] public Reader Reader { get; set; }
 
-        [Column("reservation_date")] public DateTime ReservationDate { get; set; }
-        [Column("expiration_date")] public DateTime ExpirationDate { get; set; }
+        [Column("reservation_date")] public DateTime ReservationDate { get; set; }  //дата бронирования
+        [Column("expiration_date")] public DateTime ExpirationDate { get; set; }    //дата окончания брони
         [Column("is_active")] public bool IsActive { get; set; } = true;
     }
 }

@@ -17,8 +17,8 @@ namespace Library_Proj.Models
         [Column("reader_id")] public int ReaderId { get; set; }
         [ForeignKey("ReaderId")] public Reader Reader { get; set; } // навигация к читателю
 
-        [Column("loan_date")] public DateTime LoanDate { get; set; }
-        [Column("return_date")] public DateTime ReturnDate { get; set; }
-        [Column("actual_return_date")] public DateTime? ActualReturnDate { get; set; }
+        [Column("loan_date")] public DateTime LoanDate { get; set; }    //дата выдачи
+        [Column("return_date")] public DateTime ReturnDate { get; set; }    //дата возврата плановая
+        [Column("actual_return_date")] public DateTime? ActualReturnDate { get; set; }  //дата возврата по факту 
     }
 }

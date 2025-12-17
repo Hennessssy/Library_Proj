@@ -12,14 +12,14 @@ namespace Library_Proj.Models
     {
         [Key][Column("id")] public int Id { get; set; }
 
-        [Column("reader_id")] public int ReaderId { get; set; }
-        [ForeignKey("ReaderId")] public Reader Reader { get; set; }
+        [Column("reader_id")] public int ReaderId { get; set; }     //кому выписан штраф
+        [ForeignKey("ReaderId")] public Reader Reader { get; set; } //навигационное свойство
 
-        [Column("loan_id")] public int LoanId { get; set; }
-        [ForeignKey("LoanId")] public Loan Loan { get; set; }
+        [Column("loan_id")] public int LoanId { get; set; }     //за какую выдачу штраф
+        [ForeignKey("LoanId")] public Loan Loan { get; set; }   //навигационное свойство
 
-        [Column("amount")] public decimal Amount { get; set; }
-        [Column("is_paid")] public bool IsPaid { get; set; } = false;
-        [Column("created_date")] public DateTime CreatedDate { get; set; } = DateTime.Now;
+        [Column("amount")] public decimal Amount { get; set; }          //сумма штрафа
+        [Column("is_paid")] public bool IsPaid { get; set; } = false;       // выплачено или нет фолс нет тру да
+        [Column("created_date")] public DateTime CreatedDate { get; set; } = DateTime.Now;  //дата начисления
     }
 }
