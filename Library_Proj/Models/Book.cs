@@ -8,7 +8,7 @@ namespace Library.Models
 {
 
     [Table("books")] //в самой бд будет называться books а тут класс будет Book
-    public class Book
+    public class Book //класс книга
     {
         [Key][Column("id")] public int Id { get; set; } //первичный ключ 
         [Required][StringLength(250)][Column("title")] public string Title { get; set; } = string.Empty; //поле не может быть null
